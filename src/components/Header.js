@@ -4,7 +4,7 @@ function Header() {
     return (
         <header>
             <h1>AUDITIVE</h1>
-            <p>Dark, Minimal, Experimental, Techy Drum n Bass</p>
+            <p>Dark, Minimal, Experimental, Techy Drum&Bass for Bass Addicts</p>
         </header>
     );
 }
