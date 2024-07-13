@@ -44,7 +44,8 @@
     font-weight: bold;
     margin-right: 20px;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    /* colorからallに変更して、サイズの変更もスムーズに */
 }
 
 .menu-item:hover {
@@ -52,7 +53,20 @@
 }
 
 .menu-item.active {
-    color: #00ff;
+    color: #ff0000;
+}
+
+/* 新しく追加するサイズクラス */
+.menu-item.size-small {
+    font-size: 14px;
+}
+
+.menu-item.size-medium {
+    font-size: 18px;
+}
+
+.menu-item.size-large {
+    font-size: 24px;
 }
 
 /* コンテンツエリアのスタイル */
