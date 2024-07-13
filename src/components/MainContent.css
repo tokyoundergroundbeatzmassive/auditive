@@ -1,3 +1,4 @@
+/* ビデオ背景のコンテナスタイル */
 .video-background {
     position: relative;
     width: 100%;
@@ -6,6 +7,7 @@
     background-color: #000;
 }
 
+/* ビデオ要素のスタイル */
 .video-background video {
     position: absolute;
     top: 0;
@@ -15,21 +17,64 @@
     object-fit: cover;
 }
 
-.content {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* 背景を少し暗くして文字を見やすくする */
-}
-
-/* メインコンテンツのスタイルを追加 */
-main {
-    min-height: 100vh;
+/* コンテンツラッパーのスタイル */
+.content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    z-index: 1;
+}
+
+/* メニューコンテナのスタイル */
+.menu-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* メニュー項目のスタイル */
+.menu-item {
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-item:hover {
+    color: #ddd;
+}
+
+.menu-item.active {
+    color: #00ff;
+}
+
+/* コンテンツエリアのスタイル */
+.content-area {
+    flex-grow: 1;
+    padding: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }

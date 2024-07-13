@@ -1,13 +1,31 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './MainContent.css';
 
 function MainContent() {
     const videoRef = useRef(null);
+    const [activeMenu, setActiveMenu] = useState(null);
+
+    const handleMenuClick = (menu) => {
+        setActiveMenu(menu);
+    };
+
+    const renderContent = () => {
+        switch (activeMenu) {
+            case 'new-music':
+                return <div className="content-area">New Music content</div>;
+            case 'past-releases':
+                return <div className="content-area">Past Releases content</div>;
+            case 'contact':
+                return <div className="content-area">Contact content</div>;
+            default:
+                return null;
+        }
+    };
 
     useEffect(() => {
         const video = videoRef.current;
         if (video) {
-            video.muted = true; // 明示的にミュートを設定
+            video.muted = true;
             video.play().catch(error => {
                 console.error("Video playback failed:", error);
             });
@@ -36,9 +54,17 @@ function MainContent() {
                 playsInline
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             >
-                <source src={process.env.PUBLIC_URL + "/videos/vecteezy_vhs-screen-on-crt-television-old-school-picture-glitches_23576949.mp4"} type="video/mp4" />
+                <source src={process.env.PUBLIC_URL + "/videos/bg_noise.mp4"} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
+            <div className="content-wrapper">
+                <div className="menu-container">
+                    <div className={`menu-item ${activeMenu === 'new-music' ? 'active' : ''}`} onClick={() => handleMenuClick('new-music')}>New Music</div>
+                    <div className={`menu-item ${activeMenu === 'past-releases' ? 'active' : ''}`} onClick={() => handleMenuClick('past-releases')}>Past Releases</div>
+                    <div className={`menu-item ${activeMenu === 'contact' ? 'active' : ''}`} onClick={() => handleMenuClick('contact')}>Contact</div>
+                </div>
+                {renderContent()}
+            </div>
         </main>
     );
 }
