@@ -11,6 +11,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .menu-item {
@@ -19,6 +20,8 @@
     margin-bottom: 15px;
     cursor: pointer;
     transition: all 0.3s;
+    text-align: left;
+    width: 100%;
 }
 
 .menu-item:hover {
@@ -31,17 +34,17 @@
 
 .menu-item.size-small {
     font-size: 14px;
-    color: lightblue;
+    color: rgb(0, 157, 255);
 }
 
 .menu-item.size-medium {
     font-size: 18px;
-    color: lightgreen;
+    color: rgb(0, 255, 0);
 }
 
 .menu-item.size-large {
     font-size: 24px;
-    color: pink;
+    color: rgb(255, 0, 225);
 }
 
 @media (max-width: 768px) {
