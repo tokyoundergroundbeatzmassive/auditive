@@ -14,15 +14,15 @@ function Content({ activeMenu }) {
                         <iframe
                             title="AUDITIVE - New Tunes (Unreleased) on SoundCloud"
                             width="100%"
-                            height="300"
+                            height="450"
                             scrolling="no"
                             frameBorder="no"
                             allow="autoplay"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1850077374&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1850077374&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
                         ></iframe>
-                        <div className="soundcloud-info">
-                            <a href="https://soundcloud.com/auditive-tokyo" target="_blank" rel="noopener noreferrer">AUDITIVE</a> ·{' '}
-                            <a href="https://soundcloud.com/auditive-tokyo/sets/new-tunes-unreleased" target="_blank" rel="noopener noreferrer">New Tunes (Unreleased)</a>
+                        <div style={{ fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100 }}>
+                            <a href="https://soundcloud.com/auditive-tokyo" title="AUDITIVE" target="_blank" rel="noopener noreferrer" style={{ color: '#cccccc', textDecoration: 'none' }}>AUDITIVE</a> ·{' '}
+                            <a href="https://soundcloud.com/auditive-tokyo/sets/new-tunes-unreleased" title="New Tunes (Unreleased)" target="_blank" rel="noopener noreferrer" style={{ color: '#cccccc', textDecoration: 'none' }}>New Tunes (Unreleased)</a>
                         </div>
                     </div>
                 );
