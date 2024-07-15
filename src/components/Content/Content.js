@@ -11,10 +11,6 @@ function Content({ activeMenu }) {
                             <p className="bold-text">We are AUDITIVE, Tokyo based "bedroom" Drum&Bass Producer duo.</p>
                             <p className="normal-text">We do mainly dark, minimal, experimental side of Drum&Bass, sometimes Neuro too. We love anything dope.</p>
                         </div>
-                        <div className="description">
-                            <p className="bold-text">We are AUDITIVE, Tokyo based "bedroom" Drum&Bass Producer duo.</p>
-                            <p className="normal-text">We do mainly dark, minimal, experimental side of Drum&Bass, sometimes Neuro too. We love anything dope.</p>
-                        </div>
                         <iframe
                             title="AUDITIVE - New Tunes (Unreleased) on SoundCloud"
                             width="100%"
