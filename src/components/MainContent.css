@@ -2,6 +2,8 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
+    padding-top: 60px;
+    /* メニューの高さ分の余白を追加 */
 }
 
 .content-wrapper {

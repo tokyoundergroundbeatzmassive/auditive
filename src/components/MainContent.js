@@ -1,21 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import BackgroundVideo from './BackgroundVideo/BackgroundVideo';
 import Content from './Content/Content';
 import './MainContent.css';
-import Menu from './Menu/Menu';
 
-function MainContent() {
-    const [activeMenu, setActiveMenu] = useState('new-tunes');
-
-    const handleMenuClick = (menu) => {
-        setActiveMenu(menu);
-    };
-
+function MainContent({ activeMenu }) {
     return (
         <main className="main-content">
             <BackgroundVideo />
             <div className="content-wrapper">
-                <Menu activeMenu={activeMenu} onMenuClick={handleMenuClick} />
                 <div className="scrollable-content">
                     <Content activeMenu={activeMenu} />
                 </div>
