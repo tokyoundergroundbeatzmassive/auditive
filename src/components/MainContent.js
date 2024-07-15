@@ -16,7 +16,9 @@ function MainContent() {
             <BackgroundVideo />
             <div className="content-wrapper">
                 <Menu activeMenu={activeMenu} onMenuClick={handleMenuClick} />
-                <Content activeMenu={activeMenu} />
+                <div className="scrollable-content">
+                    <Content activeMenu={activeMenu} />
+                </div>
             </div>
         </main>
     );
