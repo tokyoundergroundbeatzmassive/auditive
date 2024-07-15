@@ -14,11 +14,11 @@ function Content({ activeMenu }) {
                         <iframe
                             title="AUDITIVE - New Tunes (Unreleased) on SoundCloud"
                             width="100%"
-                            height="450"
+                            height="500"
                             scrolling="no"
                             frameBorder="no"
                             allow="autoplay"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1850077374&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1850456031&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
                         ></iframe>
                         <div style={{ fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100 }}>
                             <a href="https://soundcloud.com/auditive-tokyo" title="AUDITIVE" target="_blank" rel="noopener noreferrer" style={{ color: '#cccccc', textDecoration: 'none' }}>AUDITIVE</a> ·{' '}
@@ -41,7 +41,7 @@ function Content({ activeMenu }) {
                         <iframe
                             title="AUDITIVE - Switch Dat Break EP on SoundCloud"
                             width="100%"
-                            height="300"
+                            height="500"
                             scrolling="no"
                             frameBorder="no"
                             allow="autoplay"
@@ -54,7 +54,7 @@ function Content({ activeMenu }) {
                         <iframe
                             title="AUDITIVE - Holloway Road EP on SoundCloud"
                             width="100%"
-                            height="300"
+                            height="500"
                             scrolling="no"
                             frameBorder="no"
                             allow="autoplay"
@@ -67,7 +67,7 @@ function Content({ activeMenu }) {
                         <iframe
                             title="AUDITIVE - From Elm Imprint (2018) on SoundCloud"
                             width="100%"
-                            height="300"
+                            height="500"
                             scrolling="no"
                             frameBorder="no"
                             allow="autoplay"
@@ -80,7 +80,7 @@ function Content({ activeMenu }) {
                         <iframe
                             title="NYCT001 :: Keig' - 808or :: PREMIERE! on SoundCloud"
                             width="100%"
-                            height="300"
+                            height="500"
                             scrolling="no"
                             frameBorder="no"
                             allow="autoplay"
