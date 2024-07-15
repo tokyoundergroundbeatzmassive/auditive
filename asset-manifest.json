@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/auditive/static/css/main.543bc3f1.css",
-    "main.js": "/auditive/static/js/main.cbfd1e5f.js",
-    "static/js/453.4efa3852.chunk.js": "/auditive/static/js/453.4efa3852.chunk.js",
-    "index.html": "/auditive/index.html",
-    "main.543bc3f1.css.map": "/auditive/static/css/main.543bc3f1.css.map",
-    "main.cbfd1e5f.js.map": "/auditive/static/js/main.cbfd1e5f.js.map",
-    "453.4efa3852.chunk.js.map": "/auditive/static/js/453.4efa3852.chunk.js.map"
+    "main.css": "/static/css/main.543bc3f1.css",
+    "main.js": "/static/js/main.0057d955.js",
+    "static/js/453.4efa3852.chunk.js": "/static/js/453.4efa3852.chunk.js",
+    "index.html": "/index.html",
+    "main.543bc3f1.css.map": "/static/css/main.543bc3f1.css.map",
+    "main.0057d955.js.map": "/static/js/main.0057d955.js.map",
+    "453.4efa3852.chunk.js.map": "/static/js/453.4efa3852.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.543bc3f1.css",
-    "static/js/main.cbfd1e5f.js"
+    "static/js/main.0057d955.js"
   ]
 }
