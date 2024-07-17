@@ -14,12 +14,6 @@
     text-align: left;
 }
 
-.new-tunes-content,
-.past-releases-content {
-    width: 100%;
-    max-width: 700px;
-}
-
 .description {
     font-size: 16px;
     color: #cccccc;
@@ -29,41 +23,11 @@
     font-family: 'Arial', sans-serif;
 }
 
-.description p {
+.description .bold-text {
     font-weight: bold;
 }
 
 .description .normal-text {
     font-weight: normal;
     font-size: 21px;
-}
-
-.description ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-    font-size: 21px;
-}
-
-.description li {
-    margin: 5px 0;
-    text-align: left;
-}
-
-.soundcloud-info {
-    font-size: 10px;
-    color: #cccccc;
-    line-break: anywhere;
-    word-break: normal;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-    font-weight: 100;
-    margin-top: 5px;
-}
-
-.soundcloud-info a {
-    color: #cccccc;
-    text-decoration: none;
 }
