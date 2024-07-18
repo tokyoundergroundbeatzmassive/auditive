@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
 
 function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [apiUrl, setApiUrl] = useState('');
-
-    useEffect(() => {
-        // settings.jsonを読み込む
-        fetch('/settings/settings.json')
-            .then(response => response.json())
-            .then(data => setApiUrl(data.apiUrl))
-            .catch(error => console.error('Error loading settings:', error));
-    }, []);
+    const apiUrl = process.env.REACT_APP_API_URL;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
