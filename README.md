@@ -1,6 +1,45 @@
-# Getting Started with Create React App
+# React.js SPA Template for Music Websites
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Single Page Application (SPA) built with React.js, automatically deployed to GitHub Pages. Originally created for AUDITIVE (Drum&Bass producer).
+
+## Overview
+
+This project serves as a template for creating a simple yet effective SPA using React.js. It's designed to be easily customizable with automated deployment, making it ideal for small to medium-sized music websites or similar projects.
+
+## Features
+
+- Built with React.js
+- Automated deployment to GitHub Pages via GitHub Actions
+- Responsive design
+- Easy to customize and extend
+
+## Live Demo
+
+You can see this template in action at [https://auditive.tokyo/](https://auditive.tokyo/)
+
+## Getting Started
+
+To use this template for your own project:
+
+1. Fork this repository
+2. Update the `homepage` in `package.json` to your GitHub Pages URL
+3. Customize the content and styling to fit your needs
+4. Push changes to the `develop` branch to trigger automatic deployment
+
+## Development
+
+To run the project locally:
+
+1. Clone your forked repository
+2. Run `npm install` to install dependencies
+3. Use `npm start` to run the app in development mode
+
+## Automatic Deployment
+
+This project is set up with GitHub Actions for automatic deployment:
+
+- Pushing to the `develop` branch triggers the build and deploy workflow
+- The app is automatically built and deployed to the `gh-pages` branch
 
 ## Available Scripts
 
@@ -8,63 +47,18 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This is useful for local development and testing before pushing changes.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Feel free to use this as a template for your own projects. If you have any suggestions or improvements, please open an issue or submit a pull request.
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and available under the [MIT License](LICENSE).
