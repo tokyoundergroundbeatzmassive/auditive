@@ -5,8 +5,9 @@ function NewTunesContent() {
     return (
         <div className="new-tunes-content">
             <div className="description">
-                <p className="bold-text">We are AUDITIVE, Tokyo based "bedroom" Drum&Bass Producer duo.</p>
-                <p className="normal-text">We do mainly dark, minimal, experimental side of Drum&Bass, sometimes Neuro too. We love anything dope.</p>
+                <p className="bold-text">I am AUDITIVE, Tokyo based Japanese Drum&Bass Producer.</p>
+                <p className="normal-text">Currently focusing on mainly dark, minimal, experimental side of Drum&Bass, sometimes Neuro too. Anything dope.</p>
+                <p className="normal-text">I am also developing some VST plugins as one of my hobby.</p>
             </div>
             <iframe
                 title="AUDITIVE - New Tunes (Unreleased) on SoundCloud"
