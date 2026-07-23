@@ -33,11 +33,11 @@ jobs:
 
       - name: Install CDK dependencies
         run: |
-          npm install -g aws-cdk --ignore-scripts # --ignore-scripts is safe for the CDK CLI
+          npm install -g aws-cdk@2.1132.1 --ignore-scripts # --ignore-scripts is safe for the CDK CLI; exact version pinned to satisfy S8543
           cd cdk
           python -m venv .venv
           source .venv/bin/activate
-          pip install --only-binary :all: -r requirements.txt # NOSONAR: versions are pinned with == in requirements.txt; --only-binary prevents setup script execution
+          pip install --only-binary :all: --require-hashes -r requirements.txt # hash-locked lockfile (regenerate with: pip-compile --generate-hashes requirements.in)
 
       - name: CDK Bootstrap
         run: |
@@ -113,7 +113,7 @@ jobs:
         run: cat apigw-outputs.env >> $GITHUB_ENV
 
       - name: Install dependencies
-        run: npm ci # --ignore-scripts is intentionally omitted: postinstall scripts are required by esbuild (used internally by Vite)
+        run: npm ci --ignore-scripts # Vite 8 uses Rolldown (no install scripts needed); prevents dependency lifecycle scripts from running (S6505)
 
       - name: Build
         env:
