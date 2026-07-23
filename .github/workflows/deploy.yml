@@ -33,11 +33,11 @@ jobs:
 
       - name: Install CDK dependencies
         run: |
-          npm install -g aws-cdk --ignore-scripts # --ignore-scripts is safe for the CDK CLI
+          npm install -g aws-cdk@2.1132.1 --ignore-scripts # --ignore-scripts is safe for the CDK CLI; exact version pinned to satisfy S8543
           cd cdk
           python -m venv .venv
           source .venv/bin/activate
-          pip install --only-binary :all: -r requirements.txt # NOSONAR: versions are pinned with == in requirements.txt; --only-binary prevents setup script execution
+          pip install --only-binary :all: --require-hashes -r requirements.txt # hash-locked lockfile (regenerate with: pip-compile --generate-hashes requirements.in)
 
       - name: CDK Bootstrap
         run: |
@@ -66,6 +66,23 @@ jobs:
           echo "API_URL=${API_URL}" > apigw-outputs.env
           echo "USER_POOL_ID=${USER_POOL_ID}" >> apigw-outputs.env
           echo "USER_POOL_CLIENT_ID=${USER_POOL_CLIENT_ID}" >> apigw-outputs.env
+
+      - name: Ensure admin Cognito user
+        env:
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+        run: |
+          source apigw-outputs.env
+          # admin ユーザーが無ければ作成（メール送信は抑止）。既存なら無視。
+          aws cognito-idp admin-create-user \
+            --user-pool-id "$USER_POOL_ID" \
+            --username admin \
+            --message-action SUPPRESS >/dev/null 2>&1 || true
+          # 恒久パスワードを設定（CfnParameter を使わずシークレットから直接。テンプレートに残らない）
+          aws cognito-idp admin-set-user-password \
+            --user-pool-id "$USER_POOL_ID" \
+            --username admin \
+            --password "$ADMIN_PASSWORD" \
+            --permanent
 
       - name: Upload API GW outputs
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -96,7 +113,7 @@ jobs:
         run: cat apigw-outputs.env >> $GITHUB_ENV
 
       - name: Install dependencies
-        run: npm ci # --ignore-scripts is intentionally omitted: postinstall scripts are required by esbuild (used internally by Vite)
+        run: npm ci --ignore-scripts # Vite 8 uses Rolldown (no install scripts needed); prevents dependency lifecycle scripts from running (S6505)
 
       - name: Build
         env:
@@ -104,7 +121,6 @@ jobs:
           VITE_COGNITO_USER_POOL_ID: ${{ env.USER_POOL_ID }}
           VITE_COGNITO_USER_POOL_CLIENT_ID: ${{ env.USER_POOL_CLIENT_ID }}
           VITE_AWS_REGION: ${{ secrets.AWS_REGION }}
-          VITE_ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
         run: npm run build
 
       - name: Deploy
